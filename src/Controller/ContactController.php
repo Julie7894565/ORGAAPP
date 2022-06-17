@@ -19,18 +19,18 @@ class ContactController extends AbstractController
         ]);
     }
 
-    #[Route('/email')]
-    public function sendEmail(MailerInterface $mailer, User $user): Response
-    {
+    // #[Route('/email')]
+    // public function sendEmail(MailerInterface $mailer, User $user): Response
+    // {
 
-        $email = (new Email())
-            ->from('admin@orgaapp.com')
-            ->to($user->getEmail())
-            ->subject('[ORGAAPP]Votre compte a été créé.')
-            ->html('<p>Bonjour</p><p>Ton compte administrateur ORGAAPP a bien été créé></p>');
+    //     $email = (new Email())
+    //         ->from('admin@orgaapp.com')
+    //         ->to($user->getEmail())
+    //         ->subject('[ORGAAPP]Votre compte a été créé.')
+    //         ->html('<p>Bonjour</p><p>Ton compte administrateur ORGAAPP a bien été créé></p>');
 
-        $mailer->send($email);
+    //     $mailer->send($email);
 
-        // ...
-    }
+    //     // ...
+    // }
 }
